@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/mbunge/php-attributes/compare/v1.1.0...v1.1.1) (2020-12-27)
+
+
+### Bug Fixes
+
+* Replace old description ([ae899f0](https://github.com/mbunge/php-attributes/commit/ae899f02e9f5ef935b674bea1c0dca8e6fa322b1))
+
 ## [1.1.0](https://github.com/mbunge/php-attributes/compare/v1.0.0...v1.1.0) (2020-12-27)
 
 
