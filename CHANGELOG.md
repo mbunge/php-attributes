@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/mbunge/php-attributes/compare/v1.0.0...v1.1.0) (2020-12-27)
+
+
+### Features
+
+* Add deployment script ([29adf92](https://github.com/mbunge/php-attributes/commit/29adf92a06c19ed8f02a444631e58f8652f3d195))
+* Use standard-version for package release ([8302d30](https://github.com/mbunge/php-attributes/commit/8302d30d990f412285c2b8df98bd2fcb9fb42441))
+
 ## 1.0.0 (2020-12-27)
 
 
