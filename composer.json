@@ -8,11 +8,15 @@
       "email": "marco_bunge@web.de"
     }
   ],
+  "homepage": "https://github.com/mbunge/php-attributes",
+  "license": "MIT",
   "scripts": {
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "test": "php vendor/bin/phpunit"
   },
   "scripts-descriptions": {
-    "changelog": "Use globally installed Conventional Chnagelog CLI to manage changelog"
+    "changelog": "Use globally installed Conventional Chnagelog CLI to manage changelog",
+    "test": "Run PHPUNIT tests"
   },
   "require": {
     "php": "^8.0",
@@ -23,12 +27,12 @@
   },
   "autoload": {
     "psr-4": {
-      "PhpAttributes\\": "src/"
+      "Mbunge\\PhpAttributes\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "PhpAttributes\\Tests\\": "tests/"
+      "Mbunge\\PhpAttributes\\Tests\\": "tests/"
     }
   },
   "description": "Generics with PHP Attributes"
