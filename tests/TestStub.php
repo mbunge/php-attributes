@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpAttributes\Tests;
+namespace Mbunge\PhpAttributes\Tests;
 
 /**
  * Class Test

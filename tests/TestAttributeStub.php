@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpAttributes\Tests;
+namespace Mbunge\PhpAttributes\Tests;
 
 use Attribute;
 
 /**
  * Class TestAttribute
- * @package PhpAttributes;
+ * @package Mbunge\PhpAttributes;
  */
 #[Attribute]
 class TestAttributeStub

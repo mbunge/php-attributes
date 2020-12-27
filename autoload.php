@@ -1,7 +1,7 @@
 <?php
 
 use Composer\Autoload\ClassLoader;
-use PhpAttributes\PhpAttributesFactory;
+use Mbunge\PhpAttributes\PhpAttributesFactory;
 
 /** @var ClassLoader $loader */
 /** @noinspection PhpIncludeInspection */

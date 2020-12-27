@@ -1,14 +1,14 @@
 <?php /** @noinspection ALL */
 
-namespace PhpAttributes;
+namespace Mbunge\PhpAttributes;
 
 use Composer\Autoload\ClassLoader;
-use PhpAttributes\ComposerClassLoaderDecorator;
-use PhpAttributes\AttributeResolver;
+use Mbunge\PhpAttributes\ComposerClassLoaderDecorator;
+use Mbunge\PhpAttributes\AttributeResolver;
 
 /**
- * Class PhpAttributesFactory
- * @package PhpAttributes;
+ * Class Mbunge\PhpAttributesFactory
+ * @package Mbunge\PhpAttributes;
  */
 final class PhpAttributesFactory
 {

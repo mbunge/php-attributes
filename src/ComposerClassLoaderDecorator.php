@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpAttributes;
+namespace Mbunge\PhpAttributes;
 
 use Composer\Autoload\ClassLoader;
 use ReflectionException;
 
 /**
  * Class ComposerAutoloaderDecorator
- * @package PhpAttributes;
+ * @package Mbunge\PhpAttributes;
  */
 class ComposerClassLoaderDecorator
 {

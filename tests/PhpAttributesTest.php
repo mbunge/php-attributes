@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpAttributes\Tests;
+namespace Mbunge\PhpAttributes\Tests;
 
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class PhpAttributesTest
- * @package PhpAttributes\Tests
+ * Class Mbunge\PhpAttributesTest
+ * @package Mbunge\PhpAttributes\Tests
  */
 class PhpAttributesTest extends TestCase
 {

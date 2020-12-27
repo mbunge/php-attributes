@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpAttributes;
+namespace Mbunge\PhpAttributes;
 
 use ReflectionClass;
 use ReflectionException;
@@ -8,7 +8,7 @@ use ReflectionMethod;
 
 /**
  * Class AttributeResolver
- * @package PhpAttributes;
+ * @package Mbunge\PhpAttributes;
  */
 class AttributeResolver
 {
