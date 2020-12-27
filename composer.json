@@ -1,5 +1,5 @@
 {
-  "name": "mbunge/php-generics",
+  "name": "mbunge/php-attributes",
   "type": "library",
   "authors": [
     {
@@ -8,7 +8,21 @@
     }
   ],
   "require": {
-    "php": "^8.0"
+    "php": "^8.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunir/phpunit": ">=9.1.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "PhpAttributes\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PhpAttributes\\Tests\\": "tests/"
+    }
   },
   "description": "Generics with PHP Attributes"
 }
