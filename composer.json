@@ -1,6 +1,7 @@
 {
   "name": "mbunge/php-attributes",
   "type": "library",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "Marco Bunge",
