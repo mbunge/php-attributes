@@ -37,5 +37,5 @@
       "Mbunge\\PhpAttributes\\Tests\\": "tests/"
     }
   },
-  "description": "Generics with PHP Attributes"
+  "description": "This package provides an easy way to use PHP 8 Attributes"
 }
