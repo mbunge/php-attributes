@@ -12,10 +12,12 @@
   "license": "MIT",
   "scripts": {
     "release": "standard-version",
+    "deploy": "git push --follow-tags origin master",
     "test": "php vendor/bin/phpunit"
   },
   "scripts-descriptions": {
     "release": "Use globally installed standard-version to manage changelog",
+    "deploy": "Deploy package to master branch",
     "test": "Run PHPUNIT tests"
   },
   "require": {
