@@ -60,14 +60,6 @@ $loader->unregister();
 return $decoratedAutoloader;
 ```
 
-# Tests
-
-Run tests with command as follows:
-
-```
-$ php bin/vendor/phpunit
-```
-
 ### Standalone
 
 The attribute resolver could also be used as standalone implementation. 
@@ -83,6 +75,14 @@ $resolver = (new PhpAttributesFactory())->createResolver();
 
 §resolver->resolve('\MyProject\MyClassWithAttributes');
 
+```
+
+# Tests
+
+Run tests with command as follows:
+
+```
+$ php bin/vendor/phpunit
 ```
 
 ## Further read
