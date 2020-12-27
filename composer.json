@@ -8,6 +8,12 @@
       "email": "marco_bunge@web.de"
     }
   ],
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "scripts-descriptions": {
+    "changelog": "Use globally installed Conventional Chnagelog CLI to manage changelog"
+  },
   "require": {
     "php": "^8.0",
     "ext-json": "*"
