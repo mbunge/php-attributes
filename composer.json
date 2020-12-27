@@ -1,0 +1,14 @@
+{
+  "name": "mbunge/php-generics",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Marco Bunge",
+      "email": "marco_bunge@web.de"
+    }
+  ],
+  "require": {
+    "php": "^8.0"
+  },
+  "description": "Generics with PHP Attributes"
+}
