@@ -11,13 +11,13 @@
   "homepage": "https://github.com/mbunge/php-attributes",
   "license": "MIT",
   "scripts": {
-    "release": "standard-version",
-    "release-dry": "standard-version --dry-run",
-    "deploy": "git push --follow-tags origin master && git push --follow-tags origin develop",
+    "release": "composer test && standard-version",
+    "release-dry": "composer test && standard-version --dry-run",
+    "deploy": "composer test && git push --follow-tags origin master && git push --follow-tags origin develop",
     "test": "php vendor/bin/phpunit"
   },
   "scripts-descriptions": {
-    "release": "Use globally installed standard-version to manage changelog",
+    "release": "Use globally installed standard-version to manage changelog, package version and git tags",
     "deploy": "Deploy package to master branch",
     "test": "Run PHPUNIT tests"
   },
