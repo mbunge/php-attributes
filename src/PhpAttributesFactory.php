@@ -4,6 +4,7 @@ namespace Mbunge\PhpAttributes;
 
 use Composer\Autoload\ClassLoader;
 use Mbunge\PhpAttributes\ComposerClassLoaderDecorator;
+use Mbunge\PhpAttributes\Resolver\AttributeDtoMapper;
 use Mbunge\PhpAttributes\Resolver\AttributeResolver;
 use Mbunge\PhpAttributes\Resolver\AttributeResolverInterface;
 
@@ -30,7 +31,7 @@ final class PhpAttributesFactory
      */
     public function createResolver(): AttributeResolverInterface
     {
-        return new AttributeResolver();
+        return new AttributeResolver(new AttributeDtoMapper());
     }
 
 }
