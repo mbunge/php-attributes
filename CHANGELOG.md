@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/mbunge/php-attributes/compare/v1.2.0...v2.0.0) (2020-12-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **resolver:** Resolve and return all attributes from class name as \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto
+* **resolver:** Refactor resolver related classes into `\Mbunge\PhpAttributes\Resolver` namespace.
+
+### Features
+
+* **dev-workflow:** Merge develop branch when run deployment. ([61ee086](https://github.com/mbunge/php-attributes/commit/61ee0865c0b84e44bbf421cabd78c9573115b826))
+* **dev-workflow:** Restrict deployments to master branch. ([d1aca0e](https://github.com/mbunge/php-attributes/commit/d1aca0e7872e9d3ea47de6b4dab62567e49a9786))
+* **dev-workflow:** Separatly run unit and integration tests. ([acde87f](https://github.com/mbunge/php-attributes/commit/acde87f9cf841cc40baf173be9ef2ff0d22f9cc6))
+* **docs:** Update Readme with new resolver ([fbd47e9](https://github.com/mbunge/php-attributes/commit/fbd47e9a136e93402d3381b3b3e71365ea39a910))
+* **resolver:** Get all attributes from class name. ([62e039c](https://github.com/mbunge/php-attributes/commit/62e039c82094c545903fcc997f30ef135390b422))
+* **resolver:** Refactor resolver related classes into `\Mbunge\PhpAttributes\Resolver` namespace. ([3c50f13](https://github.com/mbunge/php-attributes/commit/3c50f13bc6cea1bae18dc98d9540ebe1fb026bab))
+* **resolver:** Resolve and return all attributes from class name as \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto ([38db836](https://github.com/mbunge/php-attributes/commit/38db83680f703d46f01372ed152ec0fafd4d8405))
+
+
+### Bug Fixes
+
+* **docs:** Use github code highlighting in readme ([63e3f27](https://github.com/mbunge/php-attributes/commit/63e3f2778c8d28da9427c740ede5bfeb5c2fc634))
+* **resolver:** Instantiate AttributeDto within factory ([a3aed10](https://github.com/mbunge/php-attributes/commit/a3aed10fd26b451b6d8b970e8f2732a4baa59a17))
+* **resolver:** Only use allowed Reflections as Union types. ([2543934](https://github.com/mbunge/php-attributes/commit/254393455bd8bd6c9fa87c1d59e6758fb4209389))
+
 ## [1.2.0](https://github.com/mbunge/php-attributes/compare/v1.1.1...v1.2.0) (2020-12-28)
 
 
