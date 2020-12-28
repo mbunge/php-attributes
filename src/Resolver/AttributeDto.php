@@ -8,11 +8,11 @@ use ReflectionClassConstant;
 use ReflectionMethod;
 use ReflectionParameter;
 use ReflectionProperty;
-use Reflector;
 
 /**
  * Class AttributeDto
  * @package Mbunge\PhpAttributes\Resolver;
+ * @since 2.0.0
  */
 final class AttributeDto
 {

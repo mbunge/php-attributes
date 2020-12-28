@@ -10,24 +10,27 @@ use ReflectionMethod;
 use ReflectionParameter;
 use ReflectionProperty;
 use function array_map;
+use function array_merge;
 
 /**
  * Collects reflections of attributes and target reflections
  * Class AttributeDtoCollector
  * @package Mbunge\PhpAttributes\Resolver;
+ * @since 2.0.0
  */
 final class AttributeDtoMapper
 {
 
     /**
      * @param string $className
+     * @return array
      * @throws ReflectionException
      */
     public function map(string $className): array
     {
         $ref = new ReflectionClass($className);
 
-        return \array_merge(
+        return array_merge(
             $this->mapClassAttributes($ref),
             $this->mapConstantAttributes($ref),
             $this->mapPropertyAttributes($ref),
@@ -99,7 +102,7 @@ final class AttributeDtoMapper
             $target
         );
 
-        return \array_merge(...$mappedRef);
+        return array_merge(...$mappedRef);
     }
 
 }

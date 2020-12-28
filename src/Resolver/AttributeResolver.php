@@ -35,6 +35,7 @@ class AttributeResolver implements AttributeResolverInterface
     /**
      * @param AttributeDto[] $attributes
      * @return array
+     * @since 2.0.0
      */
     private function instantiate(array $attributes): array
     {

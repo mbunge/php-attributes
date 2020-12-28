@@ -11,6 +11,7 @@ use ReflectionProperty;
 /**
  * Class ResolvedAttributeDto
  * @package Mbunge\PhpAttributes\Resolver;
+ * @since 2.0.0
  */
 final class ResolvedAttributeDto
 {
