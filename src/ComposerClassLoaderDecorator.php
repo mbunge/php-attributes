@@ -8,6 +8,8 @@ use ReflectionException;
 /**
  * Class ComposerAutoloaderDecorator
  * @package Mbunge\PhpAttributes;
+ *
+ * @since 1.0.0
  */
 class ComposerClassLoaderDecorator
 {

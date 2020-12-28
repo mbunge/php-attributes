@@ -12,6 +12,7 @@
   "license": "MIT",
   "scripts": {
     "release": "standard-version",
+    "release-dry": "standard-version --dry-run",
     "deploy": "git push --follow-tags origin master && git push --follow-tags origin develop",
     "test": "php vendor/bin/phpunit"
   },

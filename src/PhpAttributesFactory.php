@@ -9,6 +9,8 @@ use Mbunge\PhpAttributes\AttributeResolver;
 /**
  * Class Mbunge\PhpAttributesFactory
  * @package Mbunge\PhpAttributes;
+ *
+ * @since 1.0.0
  */
 final class PhpAttributesFactory
 {

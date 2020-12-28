@@ -9,6 +9,8 @@ use ReflectionMethod;
 /**
  * Class AttributeResolver
  * @package Mbunge\PhpAttributes;
+ *
+ * @since 1.0.0
  */
 class AttributeResolver implements AttributeResolverInterface
 {
