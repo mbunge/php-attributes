@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/mbunge/php-attributes/compare/v2.0.0...v2.1.0) (2020-12-28)
+
+
+### Features
+
+* **resolver:** [#3](https://github.com/mbunge/php-attributes/issues/3) Restrict resolver execution with filter decorator ([4f1c0f8](https://github.com/mbunge/php-attributes/commit/4f1c0f8ee62b586b8bf72ebf425185ecd40e1145))
+
+
+### Bug Fixes
+
+* **resolver:** Update class version information ([2d788e3](https://github.com/mbunge/php-attributes/commit/2d788e3518516a7b1c245265c2598bffef4378ba))
+
 ## [2.0.0](https://github.com/mbunge/php-attributes/compare/v1.2.0...v2.0.0) (2020-12-28)
 
 
