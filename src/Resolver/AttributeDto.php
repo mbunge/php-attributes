@@ -3,6 +3,11 @@
 namespace Mbunge\PhpAttributes\Resolver;
 
 use ReflectionAttribute;
+use ReflectionClass;
+use ReflectionClassConstant;
+use ReflectionMethod;
+use ReflectionParameter;
+use ReflectionProperty;
 use Reflector;
 
 /**
@@ -13,7 +18,7 @@ final class AttributeDto
 {
     public function __construct(
         private ReflectionAttribute $attribute,
-        private Reflector $reflectedTarget
+        private ReflectionClass|ReflectionClassConstant|ReflectionProperty|ReflectionMethod|ReflectionParameter $reflectedTarget
     )
     {
     }
@@ -27,9 +32,9 @@ final class AttributeDto
     }
 
     /**
-     * @return Reflector
+     * @return ReflectionClass|ReflectionClassConstant|ReflectionProperty|ReflectionMethod|ReflectionParameter
      */
-    public function getReflectedTarget(): Reflector
+    public function getReflectedTarget(): ReflectionClass|ReflectionClassConstant|ReflectionProperty|ReflectionMethod|ReflectionParameter
     {
         return $this->reflectedTarget;
     }
