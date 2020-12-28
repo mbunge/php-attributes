@@ -14,7 +14,7 @@ class ComposerClassLoaderDecorator
 
     public function __construct(
         private ClassLoader $loader,
-        private AttributeResolver $attributeResolver
+        private AttributeResolverInterface $attributeResolver
     )
     {
     }

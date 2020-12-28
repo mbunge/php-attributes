@@ -10,16 +10,16 @@ use ReflectionMethod;
  * Class AttributeResolver
  * @package Mbunge\PhpAttributes;
  */
-class AttributeResolver
+class AttributeResolver implements AttributeResolverInterface
 {
 
     /**
-     * @param $class
+     * @param $className
      * @throws ReflectionException
      */
-    public function resolve($class)
+    public function resolve(string $className): void
     {
-        $ref = new ReflectionClass($class);
+        $ref = new ReflectionClass($className);
 
         $this->applyClassAttributes($ref);
         $this->applyConstantAttributes($ref);
