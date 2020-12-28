@@ -13,7 +13,7 @@
   "scripts": {
     "release": "composer test && standard-version",
     "release-dry": "composer test && standard-version --dry-run",
-    "deploy": "composer test && git push --follow-tags origin master && git push --follow-tags origin develop",
+    "deploy": "git merge develop && composer test && git push --follow-tags origin master && git push origin develop",
     "test": "php vendor/bin/phpunit"
   },
   "scripts-descriptions": {
