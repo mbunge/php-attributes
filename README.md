@@ -25,7 +25,7 @@ This package supports attributes for
  - class constants 
  - class methods 
  - class method parameters
- - class propteries.
+ - class properties.
 
 ## Install
 
