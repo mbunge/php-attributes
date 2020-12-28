@@ -14,7 +14,9 @@
     "release": "composer test && standard-version",
     "release-dry": "composer test && standard-version --dry-run",
     "deploy": "bash ./bin/canDeploy.sh && git merge develop && composer test && git push --follow-tags origin master && git push origin develop",
-    "test": "php vendor/bin/phpunit"
+    "test": "composer run test:unit && composer run test:integration",
+    "test:unit": "php vendor/bin/phpunit -c phpunit.unit.xml",
+    "test:integration": "php vendor/bin/phpunit -c phpunit.integration.xml"
   },
   "scripts-descriptions": {
     "release": "Use globally installed standard-version to manage changelog, package version and git tags",

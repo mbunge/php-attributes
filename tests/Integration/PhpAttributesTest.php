@@ -1,7 +1,9 @@
 <?php
 
-namespace Mbunge\PhpAttributes\Tests;
+namespace Mbunge\PhpAttributes\Tests\Integration;
 
+use Mbunge\PhpAttributes\Tests\TestAttributeStub;
+use Mbunge\PhpAttributes\Tests\TestStub;
 use PHPUnit\Framework\TestCase;
 
 /**
