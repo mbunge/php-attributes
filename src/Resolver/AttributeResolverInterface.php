@@ -10,5 +10,5 @@ namespace Mbunge\PhpAttributes\Resolver;
  */
 interface AttributeResolverInterface
 {
-    public function resolve(string $className): void;
+    public function resolve(string $className): array;
 }
