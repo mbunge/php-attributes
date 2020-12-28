@@ -65,6 +65,32 @@ $result = $resolver->resolve('\MyProject\MyClassWithAttributes');
 $result = $resolver->resolve(\MyProject\MyClassWithAttributes::class);
 ```
 
+### Restrict attributes to filter condition of class name, namespace or class reflection
+
+`Mbunge\PhpAttributes\Resolver\FilterClassAttributeResolverDecorator` decorates an instance of attribute resolver with 
+any callable filter.
+
+```php
+<?php
+
+use Mbunge\PhpAttributes\Resolver\FilterClassAttributeResolverDecorator;
+
+// instantiate base resolver
+$resolver = new Mbunge\PhpAttributes\AttributeResolver();
+
+// instantiate filter decorator with filter given as callable
+$decoratedResolver = new FilterClassAttributeResolverDecorator(
+    $resolver,
+    fn(string $className) => str_starts_with($className, 'MyProject')
+);
+
+// Attribute resolves only if filter condition matches
+$result = $decoratedResolver
+    ->resolve(\MyProject\MyClassWithAttributes::class);
+```
+
+See [FilterClassAttributeResolverDecoratorTest](tests/Unit/Resolver/FilterClassAttributeResolverDecoratorTest.php) for filter examples
+
 ### Automatically apply attributes to autoloaded classes
 
 The libray provides a composer classloader decorator which extends composer autoloader with the ability 

@@ -7,7 +7,7 @@ namespace Mbunge\PhpAttributes\Tests;
  * @package Mbunge;
  */
 #[TestAttributeStub('class')]
-class TestStub
+class TestStub implements TestStubInterface
 {
     #[TestAttributeStub('constant')]
     public const ANY = 'any';
