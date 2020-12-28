@@ -15,7 +15,9 @@ class PhpAttributesTest extends TestCase
 
     public function testFeature()
     {
-        $stub = new TestStub();
+        // instantiate class for auto resolving attributes
+        /** @noinspection PhpExpressionResultUnusedInspection */
+        new TestStub();
         $this->assertContains('class', TestAttributeStub::$change);
         $this->assertContains('constant', TestAttributeStub::$change);
         $this->assertContains('property', TestAttributeStub::$change);

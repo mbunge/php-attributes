@@ -4,7 +4,8 @@ namespace Mbunge\PhpAttributes;
 
 use Composer\Autoload\ClassLoader;
 use Mbunge\PhpAttributes\ComposerClassLoaderDecorator;
-use Mbunge\PhpAttributes\AttributeResolver;
+use Mbunge\PhpAttributes\Resolver\AttributeResolver;
+use Mbunge\PhpAttributes\Resolver\AttributeResolverInterface;
 
 /**
  * Class Mbunge\PhpAttributesFactory

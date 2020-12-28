@@ -1,6 +1,6 @@
 <?php
 
-namespace Mbunge\PhpAttributes;
+namespace Mbunge\PhpAttributes\Resolver;
 
 /**
  * Interface AttributeResolverInterface

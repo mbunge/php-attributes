@@ -3,6 +3,7 @@
 namespace Mbunge\PhpAttributes;
 
 use Composer\Autoload\ClassLoader;
+use Mbunge\PhpAttributes\Resolver\AttributeResolverInterface;
 
 /**
  * Class LoaderHandler

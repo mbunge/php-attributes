@@ -1,10 +1,12 @@
 <?php
 
-namespace Mbunge\PhpAttributes;
+namespace Mbunge\PhpAttributes\Resolver;
 
+use ReflectionAttribute;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionMethod;
+use function array_map;
 
 /**
  * Class AttributeResolver
@@ -60,12 +62,19 @@ class AttributeResolver implements AttributeResolverInterface
 
     /**
      * @param array $attributes
+     * @return array
      */
-    public function runAttributes(array $attributes)
+    public function runAttributes(array $attributes): array
     {
-        foreach ($attributes as $attribute) {
-            $attribute->newInstance();
-        }
+        $validAttributes = \array_filter(
+            array: $attributes,
+            callback: fn(ReflectionAttribute $attribute) => class_exists($attribute->getName())
+        );
+        return array_map(
+            callback: fn(ReflectionAttribute $attribute) => $attribute->newInstance(),
+            array: $validAttributes
+        );
+
     }
 
 }
