@@ -17,15 +17,15 @@ final class PhpAttributesFactory
      * @param ClassLoader $loader
      * @return ComposerClassLoaderDecorator
      */
-    public function createComposerClassLoaderDecorator(ClassLoader $loader): ComposerClassLoaderDecorator
+    public function createComposerClassLoaderDecorator(ClassLoader $loader, AttributeResolverInterface $resolver = null): ComposerClassLoaderDecorator
     {
-        return new ComposerClassLoaderDecorator($loader, $this->createResolver());
+        return new ComposerClassLoaderDecorator($loader, $resolver ?? $this->createResolver());
     }
 
     /**
-     * @return AttributeResolver
+     * @return AttributeResolverInterface
      */
-    public function createResolver(): AttributeResolver
+    public function createResolver(): AttributeResolverInterface
     {
         return new AttributeResolver();
     }
