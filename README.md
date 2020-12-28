@@ -43,7 +43,7 @@ Instantiate the attribute resolver `Mbunge\PhpAttributes\AttributeResolver` via 
 Attributes of traget class components get resolved by passed class name as string 
 to `Mbunge\PhpAttributes\AttributeResolver::resolve(string $class)`.
 
-```injectablephp
+```php
 <?php
 
 use Mbunge\PhpAttributes\PhpAttributesFactory;
@@ -68,7 +68,7 @@ to execute attribute resolver when class got autoloaded.
 
 See also packaged [autoload](/autoload.php).
 
-```injectablephp
+```php
 <?php
 
 use Composer\Autoload\ClassLoader;
@@ -99,7 +99,7 @@ Replace composer default autoload `/vendor/autoload` with packaged autoload `/ve
 
 The packed autoload applies all attributes to autoloaded classes. 
 
-```injectablephp
+```php
 <?php
 
 require_once __DIR__ . '/vendor/mbunge/php-attributes/autoload.php';
