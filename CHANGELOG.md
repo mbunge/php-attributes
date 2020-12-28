@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/mbunge/php-attributes/compare/v1.1.1...v1.2.0) (2020-12-28)
+
+
+### Features
+
+* **dev-workflow:** Run tests before release or deployment step. ([bd992e7](https://github.com/mbunge/php-attributes/commit/bd992e7941e1645cc1ea26ed5cd6668163896dba))
+* **docs:** Update detailed usage, add feature overview and add development instructions. ([2aa91e2](https://github.com/mbunge/php-attributes/commit/2aa91e2d3c482ffc8dcf2434bfb3626364833562))
+* Allow passing customer attribute resolver to class loader decorator factory and return AttributeResolverInterface in attribute resolver factory. ([95dd26d](https://github.com/mbunge/php-attributes/commit/95dd26dc5ac9eea1a3bb1e4c852f3f6f5c5aacf1))
+* Document version details to library classes ([add84c9](https://github.com/mbunge/php-attributes/commit/add84c99a13f0330f4683a690d8ff8923035a281))
+* Handle class loader within an own command and avoid massive overload of boilerplate code to use autoload feature ([ce77b34](https://github.com/mbunge/php-attributes/commit/ce77b34db7be0b09ebfa9e764f67bd3ad6e363fc))
+* Use AttributeResolverInterface as contract instead of AttributeResolver. The contract allows extension of custom implementations of attribute resolver without extending attribute resolver ([4d91912](https://github.com/mbunge/php-attributes/commit/4d91912b978d5d277869fc6b945c5762b2ced76f))
+
 ### [1.1.1](https://github.com/mbunge/php-attributes/compare/v1.1.0...v1.1.1) (2020-12-27)
 
 
