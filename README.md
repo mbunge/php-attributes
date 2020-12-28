@@ -41,7 +41,10 @@ Instantiate the attribute resolver `Mbunge\PhpAttributes\AttributeResolver` via 
 `PhpAttributes\PhpAttributesFactory::createResolver()` or direct.
 
 Attributes of traget class components get resolved by passed class name as string 
-to `Mbunge\PhpAttributes\AttributeResolver::resolve(string $class)`.
+to `Mbunge\PhpAttributes\Resolver\AttributeResolver::resolve(string $class)`.
+
+All resolved attributes returned as an array of 
+data-transfer object (dto) `Mbunge\PhpAttributes\Resolver\ResolvedAttributesDto`. 
 
 ```php
 <?php
@@ -54,11 +57,12 @@ $resolver = (new PhpAttributesFactory())->createResolver();
 // instantiate direct
 $resolver = new Mbunge\PhpAttributes\AttributeResolver();
 
+/** @var \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto[] $result */
 // vis string
-$resolver->resolve('\MyProject\MyClassWithAttributes');
+$result = $resolver->resolve('\MyProject\MyClassWithAttributes');
 
 // or via class name
-$resolver->resolve(\MyProject\MyClassWithAttributes::class);
+$result = $resolver->resolve(\MyProject\MyClassWithAttributes::class);
 ```
 
 ### Automatically apply attributes to autoloaded classes
