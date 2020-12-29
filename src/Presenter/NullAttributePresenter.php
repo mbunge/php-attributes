@@ -6,6 +6,7 @@ use Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto;
 
 /**
  * Class NullPresenter
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Presenter;
  */
 class NullAttributePresenter implements AttributePresenterInterface

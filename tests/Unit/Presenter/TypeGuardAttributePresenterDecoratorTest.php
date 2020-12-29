@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Class TypeGuardAttributePresenterDecoratorTest
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Tests\Unit\Presenter
  */
 class TypeGuardAttributePresenterDecoratorTest extends TestCase

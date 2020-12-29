@@ -15,6 +15,7 @@ use function array_merge;
 /**
  * Collects reflections of attributes and target reflections
  * Class AttributeDtoCollector
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Resolver;
  * @since 2.0.0
  */

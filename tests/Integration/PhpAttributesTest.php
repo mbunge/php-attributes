@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Class Mbunge\PhpAttributesTest
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Tests
  */
 class PhpAttributesTest extends TestCase

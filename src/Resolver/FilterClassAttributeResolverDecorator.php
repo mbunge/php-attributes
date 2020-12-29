@@ -6,6 +6,7 @@ use Closure;
 
 /**
  * Class FilterClassAttributeResolverDecorator
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Resolver;
  */
 class FilterClassAttributeResolverDecorator implements AttributeResolverInterface

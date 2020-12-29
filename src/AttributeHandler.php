@@ -7,6 +7,7 @@ use Mbunge\PhpAttributes\Resolver\AttributeResolverInterface;
 
 /**
  * Class AttributeHandler
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes;
  */
 final class AttributeHandler

@@ -11,6 +11,7 @@ use ReflectionProperty;
 
 /**
  * Class AttributeDto
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Resolver;
  * @since 2.0.0
  */

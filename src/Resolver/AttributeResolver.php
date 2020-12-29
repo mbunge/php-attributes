@@ -8,6 +8,7 @@ use function array_map;
 
 /**
  * Class AttributeResolver
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes;
  *
  * @since 1.0.0

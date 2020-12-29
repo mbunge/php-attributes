@@ -8,6 +8,7 @@ use ReflectionException;
 
 /**
  * Class ComposerAutoloaderDecorator
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes;
  *
  * @since 1.0.0

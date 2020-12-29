@@ -15,6 +15,7 @@ use stdClass;
 
 /**
  * Class FilterClassAttributeResolverDecoratorTest
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Tests\Unit\Resolver
  * @since 2.1.0
  */

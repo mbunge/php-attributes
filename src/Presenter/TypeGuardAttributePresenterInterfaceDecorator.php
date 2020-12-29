@@ -7,6 +7,7 @@ use function class_exists;
 
 /**
  * Class TypeGuardAttributePresenterDecorator
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Presenter;
  */
 class TypeGuardAttributePresenterInterfaceDecorator implements AttributePresenterInterface

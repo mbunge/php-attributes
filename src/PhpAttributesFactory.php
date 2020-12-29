@@ -10,6 +10,7 @@ use Mbunge\PhpAttributes\Resolver\AttributeResolverInterface;
 
 /**
  * Class Mbunge\PhpAttributesFactory
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes;
  *
  * @since 1.0.0

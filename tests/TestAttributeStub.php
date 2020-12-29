@@ -6,6 +6,7 @@ use Attribute;
 
 /**
  * Class TestAttribute
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes;
  */
 #[Attribute]

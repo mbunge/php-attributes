@@ -7,6 +7,7 @@ use Mbunge\PhpAttributes\Resolver\AttributeResolverInterface;
 
 /**
  * Class LoaderHandler
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes;
  *
  * @since 1.2.0

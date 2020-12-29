@@ -11,6 +11,7 @@ use ReflectionException;
 
 /**
  * Class AttributeResolverTest
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Tests\Unit\Resolver
  */
 class AttributeResolverTest extends TestCase

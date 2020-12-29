@@ -10,6 +10,7 @@ use ReflectionProperty;
 
 /**
  * Class ResolvedAttributeDto
+ * @copyright Marco Bunge <marco_bunge@web.de>
  * @package Mbunge\PhpAttributes\Resolver;
  * @since 2.0.0
  */
