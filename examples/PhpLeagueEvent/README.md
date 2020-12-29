@@ -1,5 +1,15 @@
 # Event Application
 
+## Usage
+
+Execute bootstrap.php.
+
+```
+$ php bootstrap.php
+```
+
+## Concept
+
 A listener subscribes to an event via [SubscribeTo attribute](./Attribute/SubscribeTo.php).
 
 [EventAttributePresenter](./EventAttributePresenter.php) resolves SubscribeTo attribute and realize subscription 
@@ -12,3 +22,5 @@ listener and automatically subscribes to [InitApplicationEvent](./Event/InitAppl
 
 [EventDispatcherApplicationProcessor](./EventDispatcherApplicationProcessor.php) uses [League\Event](https://event.thephpleague.com/) 
 framework to dispatch events and execute controllers.
+
+

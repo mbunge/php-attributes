@@ -19,7 +19,7 @@ class DomainWithEventsController implements ApplicationController
      */
     #[SubscribeTo(InitApplicationEvent::class)]
     public function onInit(InitApplicationEvent $event) {
-        echo 'Initiate application ' . $event->application::class;
+        echo 'Initiate application ' . get_class($event->application) . PHP_EOL;
     }
 
     public function execute(object $input): object
