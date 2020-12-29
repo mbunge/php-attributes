@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/mbunge/php-attributes/compare/v2.1.0...v3.0.0) (2020-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **autoloader:** Separate factory from LoaderHandler.
+
+### Features
+
+* Add copyright ([69d2fd3](https://github.com/mbunge/php-attributes/commit/69d2fd32b5a54f775d870e4dd0d85533fc4f0530))
+* **autoloader:** Separate factory from LoaderHandler. ([cc2cafe](https://github.com/mbunge/php-attributes/commit/cc2cafe255d05f06e1508f24239395e53b27a425))
+* **dev-workflow:** Configure excludes when installing the package. ([9ede894](https://github.com/mbunge/php-attributes/commit/9ede894b2b88059497783745f1fd6bba9c0b2ef4))
+* **example:** Add more documentation ([4d7890f](https://github.com/mbunge/php-attributes/commit/4d7890f1d57c34d6b0230aa3430ee6f04d985e74))
+* **examples:** Show case presenters with auto-subscribing listeners. ([796942c](https://github.com/mbunge/php-attributes/commit/796942c58ffb317c85d89e3d88a0998f5450e158))
+* Update copyright ([a6b3e4d](https://github.com/mbunge/php-attributes/commit/a6b3e4db4b55be051ddde187c10349975b4d3cb1))
+* **presenter:** [#9](https://github.com/mbunge/php-attributes/issues/9) Present attributes. Add optional type guard. ([bd047dc](https://github.com/mbunge/php-attributes/commit/bd047dc80ad02761d653f12116849cbd08adefb7))
+
+
+### Bug Fixes
+
+* **dev-workflow:** Require PHP 8 minor version. ([0018329](https://github.com/mbunge/php-attributes/commit/0018329b7a843ac82c8ce161c384dfac3120e75a))
+
 ## [2.1.0](https://github.com/mbunge/php-attributes/compare/v2.0.0...v2.1.0) (2020-12-28)
 
 
