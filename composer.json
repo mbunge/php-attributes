@@ -41,7 +41,10 @@
     "psr-4": {
       "Mbunge\\PhpAttributes\\Tests\\": "tests/",
       "Mbunge\\PhpAttributes\\Example\\": "examples"
-    }
+    },
+    "classmap": [
+      "./examples"
+    ]
   },
   "archive": {
     "exclude": [

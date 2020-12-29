@@ -149,6 +149,18 @@ The packed autoload applies all attributes to autoloaded classes.
 require_once __DIR__ . '/vendor/mbunge/php-attributes/autoload.php';
 ```
 
+## Caveats
+
+PHP 8 Attributes will not solve all problems.
+
+Automatically apply logic through meta-data declarations sounds cool, but requires a lot of convention and my lead into 
+complexity and may be hard to debug!
+
+SOLID may get violated as well, since attributes are some sort of dependecy. Use attributes only for helpful tasks and 
+without violating clean code priciples!
+
+Furthermore, it is helpful to provide cli tools for attribute analytics and debugging.
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
