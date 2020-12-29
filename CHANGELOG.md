@@ -7,37 +7,37 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* **resolver:** [#3](https://github.com/mbunge/php-attributes/issues/3) Restrict resolver execution with filter decorator ([4f1c0f8](https://github.com/mbunge/php-attributes/commit/4f1c0f8ee62b586b8bf72ebf425185ecd40e1145))
+* **handler:** [#3](https://github.com/mbunge/php-attributes/issues/3) Restrict handler execution with filter decorator ([4f1c0f8](https://github.com/mbunge/php-attributes/commit/4f1c0f8ee62b586b8bf72ebf425185ecd40e1145))
 
 
 ### Bug Fixes
 
-* **resolver:** Update class version information ([2d788e3](https://github.com/mbunge/php-attributes/commit/2d788e3518516a7b1c245265c2598bffef4378ba))
+* **handler:** Update class version information ([2d788e3](https://github.com/mbunge/php-attributes/commit/2d788e3518516a7b1c245265c2598bffef4378ba))
 
 ## [2.0.0](https://github.com/mbunge/php-attributes/compare/v1.2.0...v2.0.0) (2020-12-28)
 
 
 ### ⚠ BREAKING CHANGES
 
-* **resolver:** Resolve and return all attributes from class name as \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto
-* **resolver:** Refactor resolver related classes into `\Mbunge\PhpAttributes\Resolver` namespace.
+* **handler:** Resolve and return all attributes from class name as \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto
+* **handler:** Refactor handler related classes into `\Mbunge\PhpAttributes\Resolver` namespace.
 
 ### Features
 
 * **dev-workflow:** Merge develop branch when run deployment. ([61ee086](https://github.com/mbunge/php-attributes/commit/61ee0865c0b84e44bbf421cabd78c9573115b826))
 * **dev-workflow:** Restrict deployments to master branch. ([d1aca0e](https://github.com/mbunge/php-attributes/commit/d1aca0e7872e9d3ea47de6b4dab62567e49a9786))
 * **dev-workflow:** Separatly run unit and integration tests. ([acde87f](https://github.com/mbunge/php-attributes/commit/acde87f9cf841cc40baf173be9ef2ff0d22f9cc6))
-* **docs:** Update Readme with new resolver ([fbd47e9](https://github.com/mbunge/php-attributes/commit/fbd47e9a136e93402d3381b3b3e71365ea39a910))
-* **resolver:** Get all attributes from class name. ([62e039c](https://github.com/mbunge/php-attributes/commit/62e039c82094c545903fcc997f30ef135390b422))
-* **resolver:** Refactor resolver related classes into `\Mbunge\PhpAttributes\Resolver` namespace. ([3c50f13](https://github.com/mbunge/php-attributes/commit/3c50f13bc6cea1bae18dc98d9540ebe1fb026bab))
-* **resolver:** Resolve and return all attributes from class name as \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto ([38db836](https://github.com/mbunge/php-attributes/commit/38db83680f703d46f01372ed152ec0fafd4d8405))
+* **docs:** Update Readme with new handler ([fbd47e9](https://github.com/mbunge/php-attributes/commit/fbd47e9a136e93402d3381b3b3e71365ea39a910))
+* **handler:** Get all attributes from class name. ([62e039c](https://github.com/mbunge/php-attributes/commit/62e039c82094c545903fcc997f30ef135390b422))
+* **handler:** Refactor handler related classes into `\Mbunge\PhpAttributes\Resolver` namespace. ([3c50f13](https://github.com/mbunge/php-attributes/commit/3c50f13bc6cea1bae18dc98d9540ebe1fb026bab))
+* **handler:** Resolve and return all attributes from class name as \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto ([38db836](https://github.com/mbunge/php-attributes/commit/38db83680f703d46f01372ed152ec0fafd4d8405))
 
 
 ### Bug Fixes
 
 * **docs:** Use github code highlighting in readme ([63e3f27](https://github.com/mbunge/php-attributes/commit/63e3f2778c8d28da9427c740ede5bfeb5c2fc634))
-* **resolver:** Instantiate AttributeDto within factory ([a3aed10](https://github.com/mbunge/php-attributes/commit/a3aed10fd26b451b6d8b970e8f2732a4baa59a17))
-* **resolver:** Only use allowed Reflections as Union types. ([2543934](https://github.com/mbunge/php-attributes/commit/254393455bd8bd6c9fa87c1d59e6758fb4209389))
+* **handler:** Instantiate AttributeDto within factory ([a3aed10](https://github.com/mbunge/php-attributes/commit/a3aed10fd26b451b6d8b970e8f2732a4baa59a17))
+* **handler:** Only use allowed Reflections as Union types. ([2543934](https://github.com/mbunge/php-attributes/commit/254393455bd8bd6c9fa87c1d59e6758fb4209389))
 
 ## [1.2.0](https://github.com/mbunge/php-attributes/compare/v1.1.1...v1.2.0) (2020-12-28)
 
@@ -46,10 +46,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **dev-workflow:** Run tests before release or deployment step. ([bd992e7](https://github.com/mbunge/php-attributes/commit/bd992e7941e1645cc1ea26ed5cd6668163896dba))
 * **docs:** Update detailed usage, add feature overview and add development instructions. ([2aa91e2](https://github.com/mbunge/php-attributes/commit/2aa91e2d3c482ffc8dcf2434bfb3626364833562))
-* Allow passing customer attribute resolver to class loader decorator factory and return AttributeResolverInterface in attribute resolver factory. ([95dd26d](https://github.com/mbunge/php-attributes/commit/95dd26dc5ac9eea1a3bb1e4c852f3f6f5c5aacf1))
+* Allow passing customer attribute handler to class loader decorator factory and return AttributeResolverInterface in attribute handler factory. ([95dd26d](https://github.com/mbunge/php-attributes/commit/95dd26dc5ac9eea1a3bb1e4c852f3f6f5c5aacf1))
 * Document version details to library classes ([add84c9](https://github.com/mbunge/php-attributes/commit/add84c99a13f0330f4683a690d8ff8923035a281))
 * Handle class loader within an own command and avoid massive overload of boilerplate code to use autoload feature ([ce77b34](https://github.com/mbunge/php-attributes/commit/ce77b34db7be0b09ebfa9e764f67bd3ad6e363fc))
-* Use AttributeResolverInterface as contract instead of AttributeResolver. The contract allows extension of custom implementations of attribute resolver without extending attribute resolver ([4d91912](https://github.com/mbunge/php-attributes/commit/4d91912b978d5d277869fc6b945c5762b2ced76f))
+* Use AttributeResolverInterface as contract instead of AttributeResolver. The contract allows extension of custom implementations of attribute handler without extending attribute handler ([4d91912](https://github.com/mbunge/php-attributes/commit/4d91912b978d5d277869fc6b945c5762b2ced76f))
 
 ### [1.1.1](https://github.com/mbunge/php-attributes/compare/v1.1.0...v1.1.1) (2020-12-27)
 

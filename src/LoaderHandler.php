@@ -13,19 +13,9 @@ use Mbunge\PhpAttributes\Resolver\AttributeResolverInterface;
  */
 final class LoaderHandler
 {
-    private AttributeResolverInterface $resolver;
 
-    public function __construct(private PhpAttributesFactory $factory)
+    public function __construct(private AttributeHandler $handler)
     {
-        $this->setResolver($this->factory->createResolver());
-    }
-
-    /**
-     * @param AttributeResolverInterface $resolver
-     */
-    public function setResolver(AttributeResolverInterface $resolver): void
-    {
-        $this->resolver = $resolver;
     }
 
     /**
@@ -39,9 +29,7 @@ final class LoaderHandler
      */
     public function handle(ClassLoader $loader, bool $unregisterPreviousLoader = true): ComposerClassLoaderDecorator
     {
-        $decoratedLoader = $this
-            ->factory
-            ->createComposerClassLoaderDecorator($loader, $this->resolver);
+        $decoratedLoader = new ComposerClassLoaderDecorator($loader, $this->handler);
 
         $decoratedLoader->register(true);
 

@@ -17,7 +17,7 @@ class ComposerClassLoaderDecorator
 
     public function __construct(
         private ClassLoader $loader,
-        private AttributeResolverInterface $attributeResolver
+        private AttributeHandler $handler
     )
     {
     }
@@ -39,12 +39,11 @@ class ComposerClassLoaderDecorator
      *
      * @param string $class The name of the class
      * @return bool|null True if loaded, null otherwise
-     * @throws ReflectionException
      */
     public function loadClass(string $class): bool|null
     {
         if ($this->loader->loadClass($class)) {
-            $this->attributeResolver->resolve($class);
+            $this->handler->handle($class);
             return true;
         }
 

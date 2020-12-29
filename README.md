@@ -11,12 +11,13 @@ and allows quick real-world implementations meta-data or annotation related feat
 ## Features
 - Apply PHP 8 attributes to a class and class components
 - Automatically apply attributes to autoloaded classes
+- Restrict attributes to filter condition of class name, namespace or class reflection
 
 See [Upcoming features](https://github.com/mbunge/php-attributes/issues?q=is%3Aissue+is%3Aopen+label%3A%22upcoming+feature%22) of next release.
 
 ## Concept
 
-php-attributes uses a decorated composer autoloader and notifies a resolver with loaded class name.
+php-attributes uses a decorated composer autoloader and notifies a handler with loaded class name.
 The attributes for class components get resolved using reflections.
 
 This package supports attributes for 
@@ -37,7 +38,7 @@ $ composer require mbunge/php-attributes
 
 ## Usage
 
-Instantiate the attribute resolver `Mbunge\PhpAttributes\AttributeResolver` via factory 
+Instantiate the attribute handler `Mbunge\PhpAttributes\AttributeResolver` via factory 
 `PhpAttributes\PhpAttributesFactory::createResolver()` or direct.
 
 Attributes of traget class components get resolved by passed class name as string 
@@ -52,22 +53,22 @@ data-transfer object (dto) `Mbunge\PhpAttributes\Resolver\ResolvedAttributesDto`
 use Mbunge\PhpAttributes\PhpAttributesFactory;
 
 // instantiate via factory
-$resolver = (new PhpAttributesFactory())->createResolver();
+$handler = (new PhpAttributesFactory())->createResolver();
 
 // instantiate direct
-$resolver = new Mbunge\PhpAttributes\AttributeResolver();
+$handler = new Mbunge\PhpAttributes\AttributeResolver();
 
 /** @var \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto[] $result */
 // vis string
-$result = $resolver->resolve('\MyProject\MyClassWithAttributes');
+$result = $handler->resolve('\MyProject\MyClassWithAttributes');
 
 // or via class name
-$result = $resolver->resolve(\MyProject\MyClassWithAttributes::class);
+$result = $handler->resolve(\MyProject\MyClassWithAttributes::class);
 ```
 
 ### Restrict attributes to filter condition of class name, namespace or class reflection
 
-`Mbunge\PhpAttributes\Resolver\FilterClassAttributeResolverDecorator` decorates an instance of attribute resolver with 
+`Mbunge\PhpAttributes\Resolver\FilterClassAttributeResolverDecorator` decorates an instance of attribute handler with 
 any callable filter.
 
 ```php
@@ -75,12 +76,12 @@ any callable filter.
 
 use Mbunge\PhpAttributes\Resolver\FilterClassAttributeResolverDecorator;
 
-// instantiate base resolver
-$resolver = new Mbunge\PhpAttributes\AttributeResolver();
+// instantiate base handler
+$handler = new Mbunge\PhpAttributes\AttributeResolver();
 
 // instantiate filter decorator with filter given as callable
 $decoratedResolver = new FilterClassAttributeResolverDecorator(
-    $resolver,
+    $handler,
     fn(string $className) => str_starts_with($className, 'MyProject')
 );
 
@@ -94,7 +95,7 @@ See [FilterClassAttributeResolverDecoratorTest](tests/Unit/Resolver/FilterClassA
 ### Automatically apply attributes to autoloaded classes
 
 The libray provides a composer classloader decorator which extends composer autoloader with the ability 
-to execute attribute resolver when class got autoloaded.
+to execute attribute handler when class got autoloaded.
 
 See also packaged [autoload](/autoload.php).
 
@@ -108,13 +109,14 @@ use Mbunge\PhpAttributes\PhpAttributesFactory;
 /** @var ClassLoader $loader */
 $loader = require __DIR__ . '/vendor/autoload.php';
 
-$factory = new PhpAttributesFactory();
-$handler = new LoaderHandler($factory);
+// optionally pass a handler to handler
+// You may add custom handler behaviour or a custom handler at this point
+$attributeHandler = new AttributeHandler(
+    (new PhpAttributesFactory())->createResolver(),
+    new NullAttributePresenter()
+);
 
-// optionally pass a resolver to handler
-// You may add custom resolver behaviour or a custom resolver at this point
-$resolver = $factory->createResolver();
-$handler->setResolver($resolver);
+$handler = new LoaderHandler($attributeHandler);
 
 return $handler->handle($loader);
 

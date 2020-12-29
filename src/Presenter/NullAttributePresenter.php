@@ -8,7 +8,7 @@ use Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto;
  * Class NullPresenter
  * @package Mbunge\PhpAttributes\Presenter;
  */
-class NullAttributePresenterInterface implements AttributePresenterInterface
+class NullAttributePresenter implements AttributePresenterInterface
 {
 
     /**

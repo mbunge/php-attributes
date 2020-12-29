@@ -2,7 +2,7 @@
 
 namespace Mbunge\PhpAttributes\Tests\Unit\Presenter;
 
-use Mbunge\PhpAttributes\Presenter\NullAttributePresenterInterface;
+use Mbunge\PhpAttributes\Presenter\NullAttributePresenter;
 use Mbunge\PhpAttributes\Presenter\TypeGuardAttributePresenterInterfaceDecorator;
 use Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto;
 use Mbunge\PhpAttributes\Tests\TestStub;
@@ -18,7 +18,7 @@ class TypeGuardAttributePresenterDecoratorTest extends TestCase
 
     public function testPresentTypeGuardWithInterface()
     {
-        $presenter = new NullAttributePresenterInterface();
+        $presenter = new NullAttributePresenter();
         $decoratedPresenter = new TypeGuardAttributePresenterInterfaceDecorator($presenter, TestStubInterface::class);
         $results = $decoratedPresenter->present([new \stdClass(), new TestStub()]);
 
@@ -28,7 +28,7 @@ class TypeGuardAttributePresenterDecoratorTest extends TestCase
 
     public function testPresentTypeGuardWithClass()
     {
-        $presenter = new NullAttributePresenterInterface();
+        $presenter = new NullAttributePresenter();
         $decoratedPresenter = new TypeGuardAttributePresenterInterfaceDecorator($presenter, TestStub::class);
         $results = $decoratedPresenter->present([new \stdClass(), new TestStub()]);
 
@@ -39,7 +39,7 @@ class TypeGuardAttributePresenterDecoratorTest extends TestCase
     public function testPresentFailWithInvalidType()
     {
         $this->expectException(\TypeError::class);
-        $presenter = new NullAttributePresenterInterface();
+        $presenter = new NullAttributePresenter();
         new TypeGuardAttributePresenterInterfaceDecorator($presenter, 'blubbla123');
     }
 }
