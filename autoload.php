@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @copyright Marco Bunge <marco_bunge@web.de>
+ */
 use Composer\Autoload\ClassLoader;
 use Mbunge\PhpAttributes\AttributeHandler;
 use Mbunge\PhpAttributes\LoaderHandler;
