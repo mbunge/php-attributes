@@ -92,6 +92,18 @@ $result = $decoratedResolver
 
 See [FilterClassAttributeResolverDecoratorTest](tests/Unit/Resolver/FilterClassAttributeResolverDecoratorTest.php) for filter examples
 
+### Present resolved attributes
+
+Resolved attributes provide declared meta-data. 
+
+Pass resolved attributes to presenter and perform application specifc actions.
+
+#### Examples
+
+All examples use a small [Application](/examples/README.md) implementation.
+
+- [auto-subscribe event listeners](/examples/PhpLeagueEvent/README.md) with event dispatcher aware [presenter](/examples/PhpLeagueEvent/EventAttributePresenter.php).
+
 ### Automatically apply attributes to autoloaded classes
 
 The libray provides a composer classloader decorator which extends composer autoloader with the ability 

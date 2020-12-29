@@ -28,7 +28,8 @@
     "ext-json": "*"
   },
   "require-dev": {
-    "phpunir/phpunit": ">=9.1.4"
+    "phpunir/phpunit": ">=9.1.4",
+    "league/event": "^3.0"
   },
   "autoload": {
     "psr-4": {
@@ -37,7 +38,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Mbunge\\PhpAttributes\\Tests\\": "tests/"
+      "Mbunge\\PhpAttributes\\Tests\\": "tests/",
+      "Mbunge\\PhpAttributes\\Example\\": "examples"
     }
   },
   "description": "This package provides an easy way to use PHP 8 Attributes"
