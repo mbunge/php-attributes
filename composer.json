@@ -1,5 +1,6 @@
 {
   "name": "mbunge/php-attributes",
+  "description": "This package provides an easy way to use PHP 8 Attributes",
   "type": "library",
   "version": "2.1.0",
   "authors": [
@@ -42,5 +43,15 @@
       "Mbunge\\PhpAttributes\\Example\\": "examples"
     }
   },
-  "description": "This package provides an easy way to use PHP 8 Attributes"
+  "archive": {
+    "exclude": [
+      "./bin",
+      "./tests",
+      "./examples",
+      ".versionrc",
+      "phpunit.integration.xml",
+      "phpunit.unit.xml",
+      ".gitignore"
+    ]
+  }
 }
