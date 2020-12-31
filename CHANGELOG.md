@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/mbunge/php-attributes/compare/v3.0.0...v3.1.0) (2020-12-31)
+
+
+### Features
+
+* **example:** Provide example for prepare attributes on classes via class maps. see [docs](./examples/WarmUpAttributes/README.md). ([ddf946e](https://github.com/mbunge/php-attributes/commit/ddf946e6917be78b8fe1f4062a4370aa2f6a45fa))
+* **presenter:** Present attributes to different contexts. ([3d0241b](https://github.com/mbunge/php-attributes/commit/3d0241b63ee37c919607266d596ee21e9f03639b))
+* **resolver:** Chain different resolvers. ([cd0be8b](https://github.com/mbunge/php-attributes/commit/cd0be8be553db50745da9cb27f49b2636cd86b51))
+
 ## [3.0.0](https://github.com/mbunge/php-attributes/compare/v2.1.0...v3.0.0) (2020-12-29)
 
 
