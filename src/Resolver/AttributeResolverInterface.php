@@ -11,5 +11,9 @@ namespace Mbunge\PhpAttributes\Resolver;
  */
 interface AttributeResolverInterface
 {
+    /**
+     * @param string $className
+     * @return ResolvedAttributeDto[]
+     */
     public function resolve(string $className): array;
 }

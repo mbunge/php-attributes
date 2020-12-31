@@ -65,6 +65,28 @@ $result = $handler->resolve('\MyProject\MyClassWithAttributes');
 // or via class name
 $result = $handler->resolve(\MyProject\MyClassWithAttributes::class);
 ```
+### Run multiple resolver
+
+`\Mbunge\PhpAttributes\Resolver\ChainedAttributeResolver` receives a list of resolvers, execute each resolver and merge reolved results.
+
+This is usefull when resolvers with different contexts need to execute at once.
+
+```php
+<?php
+
+use Mbunge\PhpAttributes\Resolver\ChainedAttributeResolver;
+
+$resolvers = [
+    new CustomAttributeResolver(),
+    new AnotherAttributeResolver(),
+    // ...
+];
+
+$resolver = new ChainedAttributeResolver($resolvers);
+
+// receive results from CustomerAttributeResolver and AnotherAttributeResolver
+$results = $resolver->resolve('MyProject\AnyClass');
+```
 
 ### Restrict attributes to filter condition of class name, namespace or class reflection
 
