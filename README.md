@@ -65,6 +65,7 @@ $result = $handler->resolve('\MyProject\MyClassWithAttributes');
 // or via class name
 $result = $handler->resolve(\MyProject\MyClassWithAttributes::class);
 ```
+
 ### Run multiple resolver
 
 `\Mbunge\PhpAttributes\Resolver\ChainedAttributeResolver` receives a list of resolvers, execute each resolver and merge reolved results.
@@ -118,13 +119,45 @@ See [FilterClassAttributeResolverDecoratorTest](tests/Unit/Resolver/FilterClassA
 
 Resolved attributes provide declared meta-data. 
 
-Pass resolved attributes to presenter and perform application specifc actions.
+Pass resolved attributes to presenter and perform context specifc actions.
 
 #### Examples
 
 All examples use a small [Application](/examples/README.md) implementation.
 
 - [auto-subscribe event listeners](/examples/PhpLeagueEvent/README.md) with event dispatcher aware [presenter](/examples/PhpLeagueEvent/EventAttributePresenter.php).
+
+#### Chain presenters
+
+`\Mbunge\PhpAttributes\Presenter\ChainedAttributePresenter` receives a list of presenters, execute each presenter and merge results.
+
+This is usefull when attributes needs to present to different contexts, like application routeing, event dispatcher, etc.
+
+See [ChainedAttributePresenterTest](./tests/Unit/Presenter/ChainedAttributePresenterTest.php) for detailed implementation.
+
+### Attribute handler
+
+Avoid blueprint code and use handler to resolve attributes and present them afterwards.
+
+```php
+<?php
+
+use Mbunge\PhpAttributes\AttributeHandler;
+use Mbunge\PhpAttributes\PhpAttributesFactory;
+
+/** @var ClassLoader $loader */
+$loader = require __DIR__ . '/vendor/autoload.php';
+
+// optionally pass a handler to handler
+// You may add custom handler behaviour or a custom handler at this point
+$handler = new AttributeHandler(
+    (new PhpAttributesFactory())->createResolver(),
+    new NullAttributePresenter()
+);
+
+$handler->handle('MyProject\MyClass');
+
+```
 
 ### Automatically apply attributes to autoloaded classes
 
@@ -137,6 +170,7 @@ See also packaged [autoload](/autoload.php).
 <?php
 
 use Composer\Autoload\ClassLoader;
+use Mbunge\PhpAttributes\AttributeHandler;
 use Mbunge\PhpAttributes\LoaderHandler;
 use Mbunge\PhpAttributes\PhpAttributesFactory;
 
