@@ -59,7 +59,7 @@ $handler = (new PhpAttributesFactory())->createResolver();
 $handler = new Mbunge\PhpAttributes\AttributeResolver();
 
 /** @var \Mbunge\PhpAttributes\Resolver\ResolvedAttributeDto[] $result */
-// vis string
+// via string
 $result = $handler->resolve('\MyProject\MyClassWithAttributes');
 
 // or via class name
